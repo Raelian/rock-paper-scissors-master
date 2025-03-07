@@ -3,13 +3,13 @@ import './Header.scss';
 
 const BasicLogo = () => {
     return (
-        <img src="/public/images/logo.svg" alt="Rock-Paper-Scissors logo" className="basic-logo"/>
+        <img src="public/images/logo.svg" alt="Rock-Paper-Scissors logo" className="basic-logo"/>
     )
 }
 
 const MasterLogo = () => {
     return (
-        <img src="/public/images/logo-bonus.svg" alt="Rock-Paper-Scissors-Lizard-Spock logo" className="master-logo"/>
+        <img src="public/images/logo-bonus.svg" alt="Rock-Paper-Scissors-Lizard-Spock logo" className="master-logo"/>
     )
 }
 
