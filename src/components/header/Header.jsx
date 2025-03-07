@@ -1,9 +1,10 @@
 import React from "react";
 import './Header.scss';
+import ''
 
 const BasicLogo = () => {
     return (
-        <img src="/images/logo.svg" alt="Rock-Paper-Scissors logo" className="basic-logo"/>
+        <img src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt="Rock-Paper-Scissors logo" className="basic-logo"/>
     )
 }
 
