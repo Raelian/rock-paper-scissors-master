@@ -1,16 +1,17 @@
 import React from "react";
 import './Header.scss';
-import ''
+import basic_logo from "/images/logo.svg";
+import master_logo from "/images/logo-bonus.svg";
 
 const BasicLogo = () => {
     return (
-        <img src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt="Rock-Paper-Scissors logo" className="basic-logo"/>
+        <img src={basic_logo} alt="Rock-Paper-Scissors logo" className="basic-logo"/>
     )
 }
 
 const MasterLogo = () => {
     return (
-        <img src="/images/logo-bonus.svg" alt="Rock-Paper-Scissors-Lizard-Spock logo" className="master-logo"/>
+        <img src={master_logo} alt="Rock-Paper-Scissors-Lizard-Spock logo" className="master-logo"/>
     )
 }
 
