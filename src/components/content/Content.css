@@ -11,8 +11,8 @@
        column-gap: 100px;
   row-gap: 50px;
   justify-content: center;
-  background-image: url("src/images/bg-triangle.svg");
-  background-size: 170px 145px;
+  background-image: url("/images/bg-triangle.svg");
+  background-size: 340px 290px;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
@@ -51,7 +51,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-paper.svg");
+  background-image: url("/images/icon-paper.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-scissors.svg");
+  background-image: url("/images/icon-scissors.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -106,7 +106,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-rock.svg");
+  background-image: url("/images/icon-rock.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -115,7 +115,7 @@
 }
 .main-container .master-select {
   position: relative;
-  background-image: url("src/images/bg-pentagon.svg");
+  background-image: url("/images/bg-pentagon.svg");
   background-size: 400px 350px;
   background-position: center;
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-paper.svg");
+  background-image: url("/images/icon-paper.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-scissors.svg");
+  background-image: url("/images/icon-scissors.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -219,7 +219,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-rock.svg");
+  background-image: url("/images/icon-rock.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-lizard.svg");
+  background-image: url("/images/icon-lizard.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -279,7 +279,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-spock.svg");
+  background-image: url("/images/icon-spock.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -345,7 +345,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-paper.svg");
+  background-image: url("/images/icon-paper.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -369,7 +369,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-scissors.svg");
+  background-image: url("/images/icon-scissors.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,7 +393,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-rock.svg");
+  background-image: url("/images/icon-rock.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -417,7 +417,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-lizard.svg");
+  background-image: url("/images/icon-lizard.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -441,7 +441,7 @@
   content: "";
   width: 120px;
   height: 120px;
-  background-image: url("src/images/icon-spock.svg");
+  background-image: url("/images/icon-spock.svg");
   background-size: 50% 50%;
   background-position: center;
   background-repeat: no-repeat;
