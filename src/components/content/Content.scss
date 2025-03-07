@@ -5,11 +5,11 @@ $rock-border: radial-gradient(66% 95% at 50% 1%, hsl(349, 70%, 56%) 99%, hsl(349
 $lizard-border: radial-gradient(66% 95% at 50% 1%, hsl(261, 72%, 63%) 99%, hsl(261, 73%, 60%) 100%);
 $spock-border: radial-gradient(66% 95% at 50% 1%, hsl(189, 58%, 57%) 99%, hsl(189, 59%, 53%) 100%);
 
-$scissors-img: url("src/images/icon-scissors.svg");
-$paper-img: url("src/images/icon-paper.svg");
-$rock-img: url("src/images/icon-rock.svg");
-$lizard-img: url("src/images/icon-lizard.svg");
-$spock-img: url("src/images/icon-spock.svg");
+$scissors-img: url("public/images/icon-scissors.svg");
+$paper-img: url("public/images/icon-paper.svg");
+$rock-img: url("public/images/icon-rock.svg");
+$lizard-img: url("public/images/icon-lizard.svg");
+$spock-img: url("public/images/icon-spock.svg");
 
 
 @mixin game-btns() {
