@@ -1,6 +1,5 @@
 import React from "react";
 import './Header.scss';
-import ''
 
 const BasicLogo = () => {
     return (
