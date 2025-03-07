@@ -72,7 +72,7 @@ $spock-img: url("/images/icon-spock.svg");
         column-gap: 100px;
         row-gap: 50px;
         justify-content: center;
-        background-image: url("src/images/bg-triangle.svg");
+        background-image: url("/images/bg-triangle.svg");
         background-size: min(170px, 340px) min(145px, 290px);
         background-position: center;
         background-repeat: no-repeat;
@@ -125,7 +125,7 @@ $spock-img: url("/images/icon-spock.svg");
 
     .master-select {
         position: relative;
-        background-image: url("src/images/bg-pentagon.svg");
+        background-image: url("/images/bg-pentagon.svg");
         background-size: 400px 350px;
         background-position: center;
         background-repeat: no-repeat;
