@@ -3,7 +3,7 @@ import './Header.scss';
 
 const BasicLogo = () => {
     return (
-        <img src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt="Rock-Paper-Scissors logo" className="basic-logo"/>
+        <img src="/images/logo.svg" alt="Rock-Paper-Scissors logo" className="basic-logo"/>
     )
 }
 
