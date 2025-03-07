@@ -1,0 +1,484 @@
+//Button border colors
+$scissors-border: radial-gradient(66% 95% at 50% 1%, hsl(40, 84%, 53%) 99%, hsl(39, 89%, 49%) 100%);
+$paper-border: radial-gradient(66% 95% at 50% 1%, hsl(230, 89%, 65%) 99%, hsl(230, 89%, 62%) 100%);
+$rock-border: radial-gradient(66% 95% at 50% 1%, hsl(349, 70%, 56%) 99%, hsl(349, 71%, 52%) 100%);
+$lizard-border: radial-gradient(66% 95% at 50% 1%, hsl(261, 72%, 63%) 99%, hsl(261, 73%, 60%) 100%);
+$spock-border: radial-gradient(66% 95% at 50% 1%, hsl(189, 58%, 57%) 99%, hsl(189, 59%, 53%) 100%);
+
+$scissors-img: url("src/images/icon-scissors.svg");
+$paper-img: url("src/images/icon-paper.svg");
+$rock-img: url("src/images/icon-rock.svg");
+$lizard-img: url("src/images/icon-lizard.svg");
+$spock-img: url("src/images/icon-spock.svg");
+
+
+@mixin game-btns() {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(66% 95% at 50% 99%, white 99%, var(--header-outline-lighter) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+@mixin border-colors($gradient) {
+    position: absolute;
+    content: "";
+    width: 140%;
+    height: 140%;
+    background: $gradient;
+    border: none;
+    border-radius: 50%;
+    top: -20%;
+    left: -20%;
+    transform: translateZ(-1px);
+}
+
+@mixin content-image($symbol) {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 120px;
+    background-image: $symbol;
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+@mixin text-atr() {
+    margin-bottom: 50px;
+    color: white;
+    font-family: var(--app-font);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    margin: 100px auto 0;
+
+    .basic-select {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 100px;
+        row-gap: 50px;
+        justify-content: center;
+        background-image: url("src/images/bg-triangle.svg");
+        background-size: min(170px, 340px) min(145px, 290px);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 600px;
+        margin: 30px auto;
+
+        .btn {
+            @include game-btns();
+        }
+        
+        .paper-btn {
+            justify-self: end;
+
+            &::before {
+                @include border-colors($paper-border);
+            }
+
+            &::after {
+                @include content-image($paper-img);
+            }
+        }
+
+        .scissors-btn {
+            justify-self: start;
+
+            &::before {
+                @include border-colors($scissors-border)
+            }
+
+            
+            &::after {
+                @include content-image($scissors-img);
+            }
+        }
+
+        .rock-btn {
+            grid-column: span 2;
+            justify-self: center;
+
+            &::before {
+                @include border-colors($rock-border)
+            }
+            
+            &::after {
+                @include content-image($rock-img);
+            }
+        } 
+    }
+
+    .master-select {
+        position: relative;
+        background-image: url("src/images/bg-pentagon.svg");
+        background-size: 400px 350px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        min-height: 350px;
+        width: 400px;
+        margin: 0 auto;
+
+        .btn {
+            @include game-btns();
+        }
+        
+        .paper-btn {
+            position: absolute;
+            left: 100%;
+            top: 20%;
+            transform: translateX(-50%);
+
+            &::before {
+                @include border-colors($paper-border)
+            }
+
+            
+            &::after {
+                @include content-image($paper-img);
+            }
+        }
+
+        .scissors-btn {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::before {
+                @include border-colors($scissors-border)
+            }
+            
+            &::after {
+                @include content-image($scissors-img);
+            }
+        }
+
+        .rock-btn {
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            transform: translate(-100%, -50%);
+
+            &::before {
+                @include border-colors($rock-border)
+            }
+            
+            &::after {
+                @include content-image($rock-img);
+            }
+        }
+
+        .lizard-btn {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateY(-50%);
+
+            &::before {
+                @include border-colors($lizard-border)
+            }
+            
+            &::after {
+                @include content-image($lizard-img);
+            }
+        }
+
+        .spock-btn {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            transform: translateX(-50%);
+
+            &::before {
+                @include border-colors($spock-border)
+            }
+            
+            &::after {
+                @include content-image($spock-img);
+            }
+        }
+    }
+}
+
+.match-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 350px;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 20px;
+
+    .player-side, .result-container, .opponent-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        flex: 1;
+    }
+
+    .player-side{
+        
+        p {
+            @include text-atr();
+        }
+    }
+
+    .btn {
+        @include game-btns();
+        cursor: default;
+    }
+
+    .paper-btn {
+
+        &::before {
+            @include border-colors($paper-border)
+        }
+
+        &::after {
+            @include content-image($paper-img);
+        }
+    }
+
+    .scissors-btn {
+
+        &::before {
+            @include border-colors($scissors-border)
+        }
+        
+        &::after {
+            @include content-image($scissors-img);
+        }
+    }
+
+    .rock-btn {
+
+        &::before {
+            @include border-colors($rock-border)
+        }
+        
+        &::after {
+            @include content-image($rock-img);
+        }
+    }
+
+    .lizard-btn {
+
+        &::before {
+            @include border-colors($lizard-border)
+        }
+        
+        &::after {
+            @include content-image($lizard-img);
+        }
+    }
+
+    .spock-btn {
+        &::before {
+            @include border-colors($spock-border)
+        }
+        
+        &::after {
+            @include content-image($spock-img);
+        }
+    }
+
+    .result-container {
+
+        p {
+            color: white;
+            font-size: 50px;
+            font-family: var(--app-font);
+            font-weight: 700;
+        }
+
+        .reset-btn {
+            border-radius: 8px;
+            background-color: white;
+            color: var(--dark-text);
+            font-family: var(--app-font);
+            font-weight: 700;
+            letter-spacing: 3px;
+            height: 40px;
+            width: 180px;
+            margin-top: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgb(0, 0, 0, .4);
+            transition: color .3s ease, background-color .3s ease, transform .3s ease;
+
+            &:hover {
+                color: white;
+                background-color: var(--header-outline-lighter);
+            }
+
+            &:active {
+                transform: scale(.95);
+
+            }
+        }
+    }
+
+    .opponent-side {
+
+        p {
+            @include text-atr();
+        }
+
+        .inactive {
+            background: var(--hover-btn-color);
+        }
+    }
+}
+
+@media  screen and (max-width: 580px) {
+    .main-container {
+
+        .basic-select {
+            column-gap: 100px;
+            row-gap: 50px;
+            background-size: 250px 200px;
+            width: auto;
+
+            .btn {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .paper-btn {
+                justify-self: end;
+
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+    
+            .scissors-btn {
+                justify-self: start;
+
+                
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+    
+            .rock-btn {
+                grid-column: span 2;
+                justify-self: center;
+
+                
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            } 
+        }
+    
+        .master-select {
+            width: 250px;
+            min-height: 250px;
+            background-size: 250px 250px;
+
+            .btn {
+                width: 80px;
+                height: 80px;
+            }
+
+            .paper-btn {
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        
+            .scissors-btn {
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        
+            .rock-btn {  
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        
+            .lizard-btn {     
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        
+            .spock-btn {            
+                &::after {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    
+    .match-container {
+        display: grid;
+        grid-template-areas:
+                        "left right"
+                        "mid mid";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        min-height: 350px;
+        max-width: 400px;
+        gap: 20px;
+
+        .player-side{
+            grid-area: left;
+            align-self: center;
+            justify-self: center;
+
+            p {
+                font-size: 18px;
+             }
+        }
+    
+        .result-container {
+            grid-area: mid;
+
+            p {
+                font-size: 40px;
+            }
+        }
+    
+        .opponent-side {
+            grid-area: right;
+            align-self: center;
+            justify-self: center;
+    
+            p {
+                font-size: 18px;
+             }
+        }
+    }
+}

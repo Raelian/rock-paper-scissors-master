@@ -1,0 +1,7 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+  width: 0 auto;
+  background: var(--bg-color);
+}/*# sourceMappingURL=index.css.map */

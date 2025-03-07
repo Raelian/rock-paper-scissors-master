@@ -1,0 +1,74 @@
+.rules-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.rules-container .rules-background {
+  position: relative;
+  display: grid;
+  grid-template-areas: "rules close" "image image";
+  justify-content: center;
+  gap: 15px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 380px;
+  border-radius: 8px;
+}
+.rules-container .rules-background .rules-title {
+  grid-area: rules;
+  font-family: var(--app-font);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dark-text);
+}
+.rules-container .rules-background .close-btn {
+  grid-area: close;
+  justify-self: end;
+  align-self: center;
+  border: none;
+  background: url("src/images/icon-close.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.rules-container .rules-background .rules-image {
+  grid-area: image;
+}
+
+@media screen and (max-width: 580px) {
+  .rules-container .rules-background {
+    display: grid;
+    grid-template-areas: "rules rules" "image image" "close close";
+    justify-content: center;
+    gap: 15px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+  .rules-container .rules-background .rules-title {
+    justify-self: center;
+    align-self: center;
+    grid-area: rules;
+    font-size: 34px;
+  }
+  .rules-container .rules-background .close-btn {
+    grid-area: close;
+    justify-self: center;
+    align-self: center;
+  }
+  .rules-container .rules-background .rules-image {
+    align-self: center;
+  }
+}/*# sourceMappingURL=Rules.css.map */

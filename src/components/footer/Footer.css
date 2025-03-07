@@ -1,0 +1,31 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 120px 100px 50px;
+}
+.footer-container .rules-btn {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  padding: 5px 30px;
+  font-family: var(--app-font);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 2px solid var(--header-outline);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, top 0.3s ease;
+}
+.footer-container .rules-btn:hover {
+  background-color: white;
+  color: black;
+  top: -2px;
+}
+
+@media screen and (max-width: 580px) {
+  .footer-container {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Footer.css.map */
