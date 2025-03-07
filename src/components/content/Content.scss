@@ -11,6 +11,9 @@ $rock-img: url("/images/icon-rock.svg");
 $lizard-img: url("/images/icon-lizard.svg");
 $spock-img: url("/images/icon-spock.svg");
 
+$triangle-img: url("/images/bg-triangle.svg");
+$pentagram-img: url("/images/bg-pentagon.svg");
+
 
 @mixin game-btns() {
     position: relative;
@@ -72,8 +75,8 @@ $spock-img: url("/images/icon-spock.svg");
         column-gap: 100px;
         row-gap: 50px;
         justify-content: center;
-        background-image: url("/images/bg-triangle.svg");
-        background-size: min(170px, 340px) min(145px, 290px);
+        background-image: $triangle-img;
+        background-size: 340px 290px;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
@@ -125,7 +128,7 @@ $spock-img: url("/images/icon-spock.svg");
 
     .master-select {
         position: relative;
-        background-image: url("/images/bg-pentagon.svg");
+        background-image: $pentagram-img;
         background-size: 400px 350px;
         background-position: center;
         background-repeat: no-repeat;
